@@ -42,9 +42,14 @@ function displayPosition(company, title, duties) {
     console.log('* ' + title + ' at ' + company + '. Responsible for ' + duties);
 }
 
-displayPosition(prevJobs[0].company, prevJobs[0].title, prevJobs[0].duties);
-displayPosition(prevJobs[1].company, prevJobs[1].title, prevJobs[1].duties);
-displayPosition(prevJobs[2].company, prevJobs[2].title, prevJobs[2].duties);
+prevJobs.forEach (function(element) {
+    displayPosition(element.company, element.title, element.duties)
+});
+
+//or
+// displayPosition(prevJobs[0].company, prevJobs[0].title, prevJobs[0].duties);
+// displayPosition(prevJobs[1].company, prevJobs[1].title, prevJobs[1].duties);
+// displayPosition(prevJobs[2].company, prevJobs[2].title, prevJobs[2].duties);
 
 console.log('  ')
 
